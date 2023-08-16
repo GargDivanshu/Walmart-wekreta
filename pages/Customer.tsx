@@ -270,7 +270,15 @@ const LocateProduct = (props: Props) => {
 };
 
 const Customer = () => {
-  const [selected, setSelected] = useState(pincode[0]);
+  const mypincode = [
+    { id: 1, pinCode: 110080},
+    { id: 2, pinCode: 110081 },
+    { id: 3, pinCode: 110082 },
+    { id: 4, pinCode: 110083 },
+    { id: 5, pinCode: 110084 },
+    { id: 5, pinCode: 110085 },
+  ];
+  const [selected, setSelected] = useState(mypincode[0]);
   const [component, setcomponent] = useState("");
 
   const router = useRouter();
@@ -427,9 +435,11 @@ const Customer = () => {
           
 
           <div className="grid grid-cols-3">
-
+{/*  */}
           {eventData.filter((item) => {
-            if(item.pinCode == selected.pinCode) return true;
+            console.log("item.pinCode:", item.pinCode);
+            console.log("selected:", selected);
+            if(item.pinCode === selected.pinCode) return true;
             return false;
           }).map((item) => (
             <div
