@@ -8,7 +8,7 @@ export default function Form() {
   const [youngestAge, setYoungestAge] = useState("");
   const [oldestAge, setOldestAge] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
 
     

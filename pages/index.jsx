@@ -101,16 +101,15 @@ export default function Home() {
   )
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getServerSideProps = async (context) => {
   if (!mongoose.connections[0].readyState) {
-    await mongoose.connect(process.env.MONGO_URL)
-    console.log("Connected to database successfully")
+    await mongoose.connect(process.env.MONGO_URL);
   }
 
-  let Rev = await Reviews.find();
-  // let Revs = await Revi.find();
+  let Rev = await Reviews.find(); // You need to have Reviews imported and defined here
+  // let Revs = await Revi.find(); // This line seems to be commented out, so no issue here
+  
   return {
     props: { Rev: JSON.parse(JSON.stringify(Rev)) },
-  }
-}
-
+  };
+};

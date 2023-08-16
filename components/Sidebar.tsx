@@ -1,24 +1,25 @@
 import QRCode from "react-qr-code";
 
+type User = {
+  firstName: string;
+  address: string;
+  email: string;
+  pincode: string;
+  password: string;
+  isuser: string;
+  credit: string;
+};
 
-type Props = {
-component: Function;
-Props :{
-  Users: {
-    firstName: string,
-    address: string,
-    email : string,
-    pincode: string,
-    password: string,
-    isuser: string,
-    credit: string,
-  }
-}
-
+type SidebarProps = {
+  Users: any;
+  component: (name: string) => void;
+  props: {
+    Users: User;
+  };
 };
 
 
-export default function Sidebar(props : Props) {
+export default function Sidebar(props : SidebarProps) {
   const component = props.component;
 
   // const url = new URL();
