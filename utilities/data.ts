@@ -57,6 +57,12 @@ export const teamData=[
 
   },
   {
+    name:"Divanshu Garg",
+    image: "divanshu.jpg",
+    description:"Third year undergraduate, who is passionate about building robust stuff and delivering quality through his work"
+
+  },
+  {
     name:"Anupam Maurya",
     image: "anupam.svg",
     description:"Third Year B.Tech Student from DTU who's highly passionate about the startup culture and technology."
