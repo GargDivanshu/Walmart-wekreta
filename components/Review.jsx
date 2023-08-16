@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import QrReader from 'react-qr-scanner';
 
-type Props = {
-  prop:string
-};
 
-const Review = (props: Props) => {
+
+const Review = (props) => {
   const [email, setemail] = useState('');
   const [name, setname] = useState('');
   const [number, setnumber] = useState('');
