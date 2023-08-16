@@ -429,7 +429,7 @@ const Customer = () => {
           <div className="grid grid-cols-3">
 
           {eventData.filter((item) => {
-            if(item.pinCode === selected) return true;
+            if(item.pinCode == selected.pinCode) return true;
             return false;
           }).map((item) => (
             <div
