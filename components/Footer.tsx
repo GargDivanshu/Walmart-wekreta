@@ -7,7 +7,7 @@ export default function Footer() {
             <a href="" className="flex items-center">
               <span className="self-center text-4xl font-semibold whitespace-nowrap text-white">
                 <span className="text-green-500">WE</span>
-                <span className="text-white">kreta</span>
+                <span className="text-black dark:text-white">kreta</span>
               </span>
             </a>
           </div>
