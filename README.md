@@ -1,5 +1,5 @@
-# [WEkreta](https://hashiras-mercor.geetika1210.repl.co/)
-## Track: Fullstack
+# [WEkreta]
+## Track: Future of Retail
 WEkreta is aimed to solve the problems of the street vendors by becoming a platform providing the ailment to all their daily problems.
 
 Ranging from converting their hardwork into smartwork to providing the feel of being working in an organised way are some of the benefits at the part of vendors to use us. Customers on the other hand get the power of bargaining back in their hands with a sense of added security and community building.
