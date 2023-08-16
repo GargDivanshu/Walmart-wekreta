@@ -51,20 +51,20 @@ export const testimonialCarouselData = [
 
 export const teamData=[
   {
-    name:"Geetika Gupta",
-    image: "geetika",
-    description:"Third Year B.Tech Student from IGDTUW who's highly passionate about the startup culture and technology."
+    name:"Chaitanya Anand",
+    image: "chaitanya.jpg",
+    description:"Passionate Fullstack developer from DTU who's highly ambitious and loves to build products that can impact millions of lives."
 
   },
   {
     name:"Anupam Maurya",
-    image: "anupam",
+    image: "anupam.svg",
     description:"Third Year B.Tech Student from DTU who's highly passionate about the startup culture and technology."
 
   },
   {
     name:"Akash Jindal",
-    image: "akash",
+    image: "akash.svg",
     description:"Third Year B.Tech Student from DTU who's highly passionate about the startup culture and technology."
 
   },

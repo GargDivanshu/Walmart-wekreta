@@ -23,7 +23,7 @@ const renderAboutData = sectionData.map((data, index) => (
   />
 ));
 
-export default function Home(Rev) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -67,7 +67,7 @@ export default function Home(Rev) {
       {/* login for vendor and consumer starts */}
       <section className='px-4 md:px-32 pt-20'>
         <div className='h-[50vh] rounded-3xl bg-black text-white px-48 flex flex-col items-center text-center'>
-          <p className='text-6xl font-bold my-14 leading-tight '>It's your time to make the move with <span className='text-green-500'>WE
+          <p className='text-6xl font-bold my-14 leading-tight '>It&apos;s your time to make the move with <span className='text-green-500'>WE
             <span className='text-white'>kreta</span></span> </p>
             
  

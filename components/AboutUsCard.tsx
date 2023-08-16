@@ -4,15 +4,15 @@ import Image from "next/image";
 export const Aboutuscard =()  => {
   return (
     <>
-      {teamData.map((data) =>(
+      {teamData.map((data,index) =>(
           
-      <div className="text-center bg-purple-100 rounded-3xl p-7">
+      <div key={index} className="text-center bg-purple-100 rounded-3xl p-7">
         <Image
-          src={`/reviews/${data.image}.svg`} 
+          src={`/reviews/${data.image}`} 
           alt="Team"
           width="210"
           height="210"
-          className="rounded-full mx-auto w-48 md:w-60 mb-4"
+          className="rounded-full aspect-square object-cover mx-auto w-48 md:w-60 mb-4"
         
         />
 
