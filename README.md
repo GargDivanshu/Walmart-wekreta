@@ -65,6 +65,14 @@ But, We are creating a separate vertical where the ones who go to customers(spec
 ### Vendor Login:
 <img width="947" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/c3c97ceb-dbd9-4ad3-b33c-2c92f9cf5353">
 
+<img width="947" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/5c402abd-9c18-40e3-afea-740af0d9d14c">
+
+<img width="944" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/00de7cc2-95a3-4bb2-9b91-f6a5725e4f86">
+
+<img width="947" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/4531e6d0-8c71-43c6-bd0b-dd60124b8304">
+
+<img width="947" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/1defaa18-ac4a-4f49-a7f8-7c69b0648749">
+
 ### Customer Login:
 <img width="947" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/bd67181b-b07d-4799-ad06-6e59d3876235">
 
