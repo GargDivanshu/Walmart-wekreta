@@ -1,4 +1,4 @@
-# [WEkreta](https://walmart-wekreta.vercel.app/)
+<img width="949" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/ee940741-5eec-48fd-bacd-97d59c451392"># [WEkreta](https://walmart-wekreta.vercel.app/)
 ## [Track: Future of Retail](https://drive.google.com/file/d/1cDjKjAYS8CUo3BouCizAPfOhyEuzN3QS/view?usp=sharing)
 WEkreta is aimed to solve the problems of the street vendors by becoming a platform providing the ailment to all their daily problems.
 
@@ -53,7 +53,12 @@ The present developments/apps only either supply items/services from seller/ware
 But, We are creating a separate vertical where the ones who go to customers(specifically street vendors) are getting tech enabled to increase their profits and we function just as an aggregator providing some service.
 
 
+## User Interface:
+<img width="949" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/de8b033c-a9fb-4a5c-95d0-d706105afd23">
 
+<img width="944" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/46040181-3b6c-478b-92be-548240f5e776">
+
+<img width="944" alt="image" src="https://github.com/UltigendLemate/Walmart-wekreta/assets/96184674/08219ea5-25e3-470c-b8de-883d593ff13f">
 
 ## Thank You
 
