@@ -1,4 +1,4 @@
-# [WEkreta]
+# [WEkreta](https://walmart-wekreta.vercel.app/)
 ## Track: Future of Retail
 WEkreta is aimed to solve the problems of the street vendors by becoming a platform providing the ailment to all their daily problems.
 
