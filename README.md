@@ -27,7 +27,8 @@ consumer at the moment.
 
 ## Tech Stack:
 -Tech Stack & Implementation: WEkreta employs a dynamic tech stack for retail enhancement.
--Tech Stack: Frontend: Next.js, Typescript, for agile user interactions. Backend: MERN (MongoDB, Express.js, React, Node.js) with Typescript, ensuring data efficiency. --
+
+-Tech Stack: Frontend: Next.js, Typescript, for agile user interactions. Backend: MERN (MongoDB, Express.js, React, Node.js) with Typescript, ensuring data efficiency. 
 -Image Processing: TensorFlow, Puppeteer, automate vendor cart updates.(Whatsapp Bots) Data Analysis: Python, Flask, informed vendor decisions. NLP Integration: API, enriched consumer engagement.
 -Implementation: Vendors capture cart images, TensorFlow & Puppeteer update dash. NLP-based ratings impact visibility. Consumers' reviews fuel ML model for personalized suggestions. API enhances shopping with NLP. Scalability via MongoDB. UI: React, Next.js, responsive UX.
 -Quality Assurance: Rigorous testing & deployment pipelines assure reliability.
