@@ -26,7 +26,7 @@ export default function Vendorlogin() {
     });
 
     try {
-      const response = await fetch(`${process.env.DOMAIN}/api/login`, {
+      const response = await fetch(`/api/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
