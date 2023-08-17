@@ -1,5 +1,5 @@
 # [WEkreta](https://walmart-wekreta.vercel.app/)
-## Track: Future of Retail
+## [Track: Future of Retail](https://drive.google.com/file/d/1cDjKjAYS8CUo3BouCizAPfOhyEuzN3QS/view?usp=sharing)
 WEkreta is aimed to solve the problems of the street vendors by becoming a platform providing the ailment to all their daily problems.
 
 Ranging from converting their hardwork into smartwork to providing the feel of being working in an organised way are some of the benefits at the part of vendors to use us. Customers on the other hand get the power of bargaining back in their hands with a sense of added security and community building.
@@ -7,7 +7,7 @@ Ranging from converting their hardwork into smartwork to providing the feel of b
 <img width="557" alt="image" src="https://github.com/geetika001/Hashiras-Mercor/assets/98944568/8d271811-41e3-4569-a279-97c15b1f48b8">
 
 
-## Two End Portal:
+## [Two End Portal:](https://drive.google.com/file/d/1gY7k6TtMpcEgNaltmagqJtUO2daVISte/view?usp=sharing)
 <img width="904" alt="image" src="https://github.com/geetika001/Hashiras-Mercor/assets/98944568/ce618e02-6667-449c-8555-417d8f01d1df">
 
 ### For Vendors:
