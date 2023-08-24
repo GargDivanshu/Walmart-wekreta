@@ -1,6 +1,9 @@
 import {signIn} from 'next-auth/react'
 import {useState} from 'react'
 import {useRouter} from 'next/router'
+import toast, {Toaster} from 'react-hot-toast'
+
+
 export default function Vendorlogin() {
   const router = useRouter();
   const [phone, setPhone] = useState('');
@@ -41,13 +44,16 @@ export default function Vendorlogin() {
         const data = await response.json();
         console.log(data);
         console.log(requestBody);
+        toast.success('Login Successful')
      
       } else {
 
         console.log('Request failed with status:', response.status);
+        toast.error('Login Failed - Invalid Credentials or maybe user does not exist')
       }
     } catch (error) {
       console.log('An error occurred:', error);
+      toast.error('Login Failed: ' + error)
     }
   };
   return (
@@ -136,6 +142,7 @@ export default function Vendorlogin() {
               </div>
               <div className="px-4 pb-2 pt-4">
                 <button type="submit" onClick={handleSubmit} className="uppercase block w-full p-4 text-lg rounded-full bg-indigo-500 hover:bg-indigo-600 focus:outline-none">
+                  <Toaster/>
                   sign in
                 </button>
               </div>

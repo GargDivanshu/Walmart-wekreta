@@ -1,5 +1,13 @@
 import {signIn} from 'next-auth/react'
+import toast, {Toaster} from 'react-hot-toast'
+
+
 export default function Customerlogin() {
+
+  const handleSubmit = () => {
+    signIn("google" ,{callbackUrl: '/form' })
+    toast.success('Login Successful')
+  }
   return (
     <>
       <section className="min-h-screen flex items-stretch text-white ">
@@ -29,7 +37,8 @@ export default function Customerlogin() {
             </h1>
             <div className="py-6 space-x-2">
             <p className="text-gray-100 mb-5 ">Click below to sign in using your Gmail account</p>
-              <button type="button" onClick={() => signIn("google" ,{callbackUrl: '/form' })}>
+              <button type="button" onClick={handleSubmit}>
+                <Toaster/>
               <span className="w-24 h-24 items-center justify-center inline-flex rounded-full font-bold text-lg border-2 border-white">
                 G+
               </span>
