@@ -17,7 +17,7 @@ const Enterprise = () => {
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleFirstNameChange = (event) => {
+  const handleFirstNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFirstName(event.target.value);
   }
 
