@@ -21,20 +21,20 @@ const Enterprise = () => {
     setFirstName(event.target.value);
   }
 
-  const handlePhoneChange = (event) => {
+  const handlePhoneChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPhone(event.target.value);
   };
 
-  const handlePasswordChange = (event) => {
+  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPassword(event.target.value);
   };
 
-  const handleFirstName = (event) => {
+  const handleFirstName = (event: React.ChangeEvent<HTMLInputElement>) => {
     setFirstName(event.target.value);
   }
 
   console.log(firstName + " " + phone + " " + password + " ")
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
     console.log("hi");
     
