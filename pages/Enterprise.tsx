@@ -120,19 +120,19 @@ const Enterprise = () => {
 
                 {
                     (vendorOptions) ? <div className="grid grid-cols-1 animate translate-y-3 transition ">
-                        <span className="text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532] hover:cursor-pointer"> 
+                        <span className="hover:cursor-not-allowed text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532]"> 
                         <AiOutlineUserAdd fontSize={15} className="my-auto mt-1 mx-2 "/>
                         Add vendor</span>
-                        <span className="text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532] hover:cursor-pointer">
+                        <span className="hover:cursor-not-allowed text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532]">
                         <AiOutlineUserDelete fontSize={15} className="my-auto mt-1 mx-2"/>
                             Remove vendor</span>
-                        <span className="text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532] hover:cursor-pointer">
+                        <span className="hover:cursor-not-allowed text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532]">
                         <AiOutlineUser fontSize={15} className="my-auto mt-1 mx-2"/>
                             Edit vendor</span>
                     </div> : null
                 }
 
-                <button className="hover:text-[#1f2532] text-[#3e485e] text-sm my-4 py-2 w-3/5 rounded-md hover:outline-1 hover:bg-slate-400/10 hover:shadow-md border-[1px] border-black">
+                <button className="hover:text-[#1f2532] text-[#3e485e] text-sm my-4 py-2 w-3/5 rounded-md hover:outline-1 hover:cursor-not-allowed hover:bg-slate-400/10 hover:shadow-md border-[1px] border-black">
                     Statistics
                 </button>
             </div>

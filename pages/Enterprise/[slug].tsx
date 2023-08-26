@@ -69,13 +69,19 @@ export default function Slug({ Users }) {
 
                 {
                     (vendorOptions) ? <div className="grid grid-cols-1 animate translate-y-3 transition ">
-                        <span className="text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532] hover:cursor-pointer"> 
+                        <span 
+                        onClick={() => setstate("addVendor")}
+                        className="text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532] hover:cursor-pointer"> 
                         <AiOutlineUserAdd fontSize={15} className="my-auto mt-1 mx-2 "/>
                         Add vendor</span>
-                        <span className="text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532] hover:cursor-pointer">
+                        <span 
+                        onClick={() => setstate("removeVendor")}
+                        className="text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532] hover:cursor-pointer">
                         <AiOutlineUserDelete fontSize={15} className="my-auto mt-1 mx-2"/>
                             Remove vendor</span>
-                        <span className="text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532] hover:cursor-pointer">
+                        <span 
+                        onClick={() => setstate("editVendor")}
+                        className="text-sm py-2 flex text-[#3e485e] hover:text-[#1f2532] hover:cursor-pointer">
                         <AiOutlineUser fontSize={15} className="my-auto mt-1 mx-2"/>
                             Edit vendor</span>
                     </div> : null
@@ -114,9 +120,11 @@ export default function Slug({ Users }) {
 
           { 
           (state === "Home") ? 
+          <div className="grid grid-cols-2">
            <img 
-           className="w-[450px] aspect-auto mx-auto pb-10"
-           src="https://cdn.shopify.com/shopifycloud/brochure/assets/landers/ppc/ecommerce/hero-large-ae50b5b2773d8c345a5b0b785bb4f5bd0590aebdccc5d3c0d1e39eaa7c932a52.png?quality=50"/>
+           className="w-[300px] aspect-auto mx-auto pb-10"
+           src="/indian_vendor.png"/>
+           </div>
         : (state === "Statistics") ?
         <div className="flex flex-row w-full h-full mx-auto">
             <StackedBar />
