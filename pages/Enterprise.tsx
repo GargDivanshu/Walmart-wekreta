@@ -58,7 +58,7 @@ const Enterprise = () => {
 
       if (response.ok) {
         console.log(response + " response")
-        router.push(`http://localhost:3000/Enterprise/${phone}`);
+        router.push(`/Enterprise/${phone}`);
     
         const data = await response.json();
         console.log(data);
@@ -84,7 +84,7 @@ const Enterprise = () => {
     >
         <Navbar />
 
-        <div className="flex h-screen border-b-[1px] border-black min-h-fit">
+        <div className="flex border-b-[1px] border-black min-h-fit">
         {/* sidebar starts */}
         <div className="w-1/4 border-r-[1px] border-r-black relative">
             <div className="relative h-[75px] text-center text-2xl items-center my-auto">
