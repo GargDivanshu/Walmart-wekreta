@@ -1,5 +1,5 @@
 import Enterprise from './../../Enterprise';
-import Vendor from './../../Vendor';
+import Vendor from '../../../models/Vendor';
 import connectDb from './../../../middleware/mongoose';
 
 const handler = async (req, res) => {
