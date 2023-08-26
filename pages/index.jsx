@@ -76,8 +76,8 @@ export default function Home() {
  
   {/* this is the div surrounding vendor and customer */}
 <div id="cardssection" className='flex justify-evenly px-20 relative -top-16  ' >
-          <LoginCard name="Vendor" imgName='vendor' text='Ordering stuff is easy without making your pocket squeezy. Sign up to know how' />
-          <LoginCard name='Consumer' imgName='consumer' text='Bahut hua online ka prahaar, ab phone hi badhaega apki raftaar. Abhi sign up karei' />
+          <LoginCard name="Vendor" imgName='vendor' text='Sign up to know how Bahut hua online ka prahaar, ab phone hi badhaega apki raftaar. Abhi sign up karei' />
+          <LoginCard name='Consumer' imgName='consumer' text='Ordering stuff is easy without making your pocket squeezy.' />
         </div>
         </section> 
       
