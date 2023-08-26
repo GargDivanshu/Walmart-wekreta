@@ -1,21 +1,50 @@
-import Enterprise from './../Enterprise';
-import connectDb from './../../middleware/mongoose';
+import Enterprise from '../../../models/Enterprise.js';
+import connectDb from '../../../middleware/mongoose';
 import bcrypt from 'bcrypt';
+
 
 const handler = async (req, res) => {
     if(req.method === "POST" ) {
-        for(let i = 0; i<req.body.length; i++) {
-            const hashedPassword = await bcrypt.hash(req.body[i].password, 12);
-            let b = new Enterprise({
-                firstName: req.body[i].firstName,
-                phone: req.body[i].phone,
-                password: hashedPassword,
-                isuser: req.body[i].isuser
-            });
 
-            await b.save();
-            res.status(200).json({success: "success"});
+        try {
+           
+
+            
+                const enterprise = await Enterprise.findOne({phone: req.body.phone}, async (err, enterprise) => {
+                     if(err) {
+                         res.status(400).json({err: "Error"});
+                     }
+                     if(!enterprise) {
+                        const hashedPassword = await bcrypt.hash(req.body.password, 12);
+                        enterprise = new Enterprise({
+                            firstName: req.body.firstName,
+                            phone: req.body.phone,
+                            password: hashedPassword,
+                            // isuser: req.body[i].isuser
+                        });
+            
+                        await enterprise.save();
+                        res.status(200).json({success: "New Enterprise created"});
+           
+                        return b;
+                         
+                     }
+                 })
+                 const isPasswordValid = await bcrypt.compare(password, req.password);
+ 
+                 if(!isPasswordValid) {
+                     res.status(400).json({err: "Invalid password"});
+                 }
+
+                 res.status(200).json({success: "Enterprise login successful"});
+             
+    
         }
+        catch (error) {
+            res.json(error);
+            res.status(405).end();
+          }
+        
     } else {
         res.status(400).json({err: "This method is not allowed"});
     }

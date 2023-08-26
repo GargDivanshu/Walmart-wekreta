@@ -3,6 +3,8 @@ import type { AppProps } from 'next/app'
 import Footer from '../components/Footer'
 import CustomChatbot from '../components/bot.js' 
 import { SessionProvider } from "next-auth/react"
+import Chart from 'chart.js/auto';
+
 
 export default function App({ Component, pageProps }: AppProps) {
   return(<>
