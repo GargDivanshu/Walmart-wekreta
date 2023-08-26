@@ -13,6 +13,7 @@ import StackedBar from './../../components/charts/StackedBar';
 import Pie from './../../components/charts/Pie'
 import toast, {Toaster} from 'react-hot-toast'
 import Reviews from "../../models/Reviews";
+import MultiLineChart from './../../components/charts/MultiLineChart';
 
 export default function Slug({ Users, reviews }) {
 
@@ -76,7 +77,7 @@ export default function Slug({ Users, reviews }) {
     >
         <Navbar />
 
-        <div className="flex h-screen border-b-[1px] border-black min-h-fit">
+        <div className="flex border-b-[1px] border-black min-h-fit">
         {/* sidebar starts */}
         <div className="w-1/4 border-r-[1px] border-r-black relative">
             <div className="relative h-[75px] text-center text-2xl items-center my-auto">
@@ -204,10 +205,15 @@ export default function Slug({ Users, reviews }) {
 
            </div>
         : (state === "Statistics") ?
-        <div className="flex flex-row w-full h-full mx-auto">
+        <div className="flex flex-col w-full h-full mx-auto">
+            <div className="flex flex-row">
             <StackedBar />
 
             <Pie />
+            </div>
+
+            <div className="w-[400px] mx-auto"><MultiLineChart /></div>
+            
         </div>
         : (state === "addVendor") ? 
         <div>
