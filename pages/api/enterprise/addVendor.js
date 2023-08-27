@@ -3,42 +3,40 @@ import Vendor from '../../../models/Vendor';
 import connectDb from './../../../middleware/mongoose';
 
 const handler = async (req, res) => {
-    if (req.method === "POST") {
-     
-        const vendorPhone = req.body.phone;
-        const enterprisePhone = req.body.enterprise_phone;
-  
-        // Check if a vendor with the given phone number exists in the database
-        var vendor = await Vendor.findOne({ phone: vendorPhone });
-  
-        if (!vendor) {
-          res.status(400).json({ err: "Vendor does not exist" });
-            
-          } else {
-           
+  if (req.method === "POST") {
+    const vendorPhone = req.body.phone;
+    const enterprisePhone = req.body.enterprise_phone;
 
-            const enterprise = await Enterprise.findOne({ phone: enterprisePhone }); // Retrieve the existing Enterprise document
-            
-            // Check if the vendor is already present in the employee array
-            const isVendorAlreadyAdded = enterprise.employee.includes(vendor);
-            
-            if (isVendorAlreadyAdded) {
-              res.status(400).json({ err: "Vendor already added" }); // Return an error response
-            } else {
-              enterprise.employee.push(vendor); // Add the new vendor to the employee array
-              await enterprise.save(); // Save the updated document
-              res.status(200).json({ success: "Vendor added successfully" }); // Return a success response
-            }
-            
-        }
+    try {
+      const vendor = await Vendor.findOne({ phone: vendorPhone });
 
-  
-      res.status(200).json({ success: "success" });
-      return enterprise;
-    } else {
-      res.status(400).json({ err: "This method is not allowed" });
+      if (!vendor) {
+        return res.status(400).json({ err: "Vendor does not exist" });
+      }
+
+      const enterprise = await Enterprise.findOne({ phone: enterprisePhone });
+
+      if (!enterprise) {
+        return res.status(400).json({ err: "Enterprise does not exist" });
+      }
+
+      const isVendorAlreadyAdded = enterprise.employee.includes(vendor._id);
+
+      if (isVendorAlreadyAdded) {
+        return res.status(400).json({ err: "Vendor already added" });
+      }
+
+      enterprise.employee.push(vendor._id);
+      await enterprise.save();
+
+      return res.status(200).json({ success: "Vendor added successfully" });
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ err: "Internal server error" });
     }
-  };
-  
+  } else {
+    return res.status(400).json({ err: "This method is not allowed" });
+  }
+};
 
 export default connectDb(handler);
