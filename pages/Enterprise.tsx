@@ -87,9 +87,9 @@ const Enterprise = () => {
         <div className="flex border-b-[1px] border-black min-h-fit">
         {/* sidebar starts */}
         <div className="w-1/4 border-r-[1px] border-r-black relative">
-            <div className="relative h-[75px] text-center text-2xl items-center my-auto">
+            {/* <div className="relative h-[75px] text-center text-2xl items-center my-auto">
                 <span className="absolute top-0 bottom-0 left-0 right-0 m-auto font-bold mt-4 text-black">WeKreta</span>
-            </div>
+            </div> */}
 
             <div className="text-sm mx-auto text-center flex w-3/5">
             {/* <MdOutlineDashboard 
