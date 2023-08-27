@@ -38,7 +38,7 @@ export default function Slug({ Users, reviews, vendors }) {
         event.preventDefault();
 
         const data = JSON.stringify({
-            enterprise_phone: Users.phone,
+            enterprise_phone: Users.phone.toString(),
             phone: phoneNum
         })
 
@@ -62,16 +62,6 @@ export default function Slug({ Users, reviews, vendors }) {
         }
     }
 
-    console.log("bsdk " + Users)
-
-    const TableData = [
-      { column1: 'Value 1', column2: 'Value 2', column3: 'Value 3', column4: 'Value 4' },
-      // Add more data rows as needed
-    ];
-//     var spinning = [12, 2, 3, 4, 6, 7, 8]
-//   var trans = [12, 2, 3, 4, 6, 7, 8]
-//   var carding = [12, 2, 3, 4, 6, 7, 8]
-//   var heatCool = [12, 2, 3, 4, 6, 7, 8]
 
   return (
     <div className="min-h-screen max-h-content text-[#A2A4A5]"
@@ -81,9 +71,9 @@ export default function Slug({ Users, reviews, vendors }) {
         <div className="flex border-b-[1px] border-black min-h-fit">
         {/* sidebar starts */}
         <div className="w-1/4 border-r-[1px] border-r-black relative">
-            <div className="relative h-[75px] text-center text-2xl items-center my-auto">
+            {/* <div className="relative h-[75px] text-center text-2xl items-center my-auto">
                 <span className="absolute top-0 bottom-0 left-0 right-0 m-auto font-bold mt-4 text-black">WeKreta</span>
-            </div>
+            </div> */}
 
             <div className="text-sm mx-auto text-center flex w-3/5">
             {/* <MdOutlineDashboard 
