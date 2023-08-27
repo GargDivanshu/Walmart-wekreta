@@ -64,7 +64,7 @@ export default function Slug({ Users, reviews, vendors }) {
 
 
   return (
-    <div className="min-h-screen max-h-content text-[#A2A4A5]"
+    <div className="min-h-screen max-h-fit text-[#A2A4A5]"
     >
         <Navbar />
 
