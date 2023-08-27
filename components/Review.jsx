@@ -29,7 +29,7 @@ const Review = (props) => {
       };
 
     try {
-        const response = await fetch(`${process.env.DOMAIN}/api/reviews`, {
+        const response = await fetch(`/api/reviews`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
