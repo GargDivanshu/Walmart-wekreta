@@ -9,23 +9,21 @@ import {FiLogOut} from 'react-icons/fi'
 import {AiOutlineHome, AiOutlineUserAdd, AiOutlineUserDelete, AiOutlineUser} from 'react-icons/ai'
 import Enterprise from "../../models/Enterprise";
 import mongoose from "mongoose";
+import MyTable from './../../components/Table';
+import ReviewTable from './../../components/ReviewTable';
 import StackedBar from './../../components/charts/StackedBar';
 import Pie from './../../components/charts/Pie'
 import toast, {Toaster} from 'react-hot-toast'
 import Reviews from "../../models/Reviews";
+import Vendor from "../../models/Vendor";
 import MultiLineChart from './../../components/charts/MultiLineChart';
 
-export default function Slug({ Users, reviews }) {
+export default function Slug({ Users, reviews, vendors }) {
 
     const router = useRouter();
     const { slug } = router.query;
-
-    console.log("reviews" + JSON.stringify(reviews))
-    
-    reviews.map((item) => {
-        console.log(item + "  ___1")
-    })
   
+    console.log("vendors " + JSON.stringify(vendors))
 
     const [vendorOptions, setVendorOptions] = useState(false);
     const [state, setstate] = useState("Home")
@@ -45,7 +43,7 @@ export default function Slug({ Users, reviews }) {
         })
 
         try {
-            const res = fetch(`${process.env.DOMAIN}/api/enterprise/addVendor`, {
+            const res = fetch(`http://localhost:3000/api/enterprise/addVendor`, {
                 method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -66,7 +64,10 @@ export default function Slug({ Users, reviews }) {
 
     console.log("bsdk " + Users)
 
-
+    const TableData = [
+      { column1: 'Value 1', column2: 'Value 2', column3: 'Value 3', column4: 'Value 4' },
+      // Add more data rows as needed
+    ];
 //     var spinning = [12, 2, 3, 4, 6, 7, 8]
 //   var trans = [12, 2, 3, 4, 6, 7, 8]
 //   var carding = [12, 2, 3, 4, 6, 7, 8]
@@ -180,6 +181,10 @@ export default function Slug({ Users, reviews }) {
             </div>
            </div>
 
+           <div className="col-span-2">
+           <MyTable vendors={vendors} />
+           </div>
+           
            <div className="text-center col-span-2 flex flex-col py-2">
             Reviews
             <span className="text-xs py-2">
@@ -188,7 +193,10 @@ export default function Slug({ Users, reviews }) {
             </div>
            <div className="col-span-2 text-center flex justify-center py-2">
             
-            {Array.isArray(reviews) && reviews.length > 0 ?
+            <ReviewTable 
+            reviews={reviews}
+            />
+            {/* {Array.isArray(reviews) && reviews.length > 0 ?
                 (
                     reviews.map((review) => {
                         return (
@@ -200,7 +208,7 @@ export default function Slug({ Users, reviews }) {
                         )
                 })
                 ):null
-            }
+            } */}
            </div>
 
            </div>
@@ -291,12 +299,15 @@ export async function getServerSideProps(context) {
     let Users = await Enterprise.findOne({ phone: context.query.slug });
 
     const reviews = await Reviews.find({ vendornumber: { $in: Users.employee } });
+
+    const vendors = await Vendor.find({ _id: { $in: Users.employee } });
     // const reviews = await Reviews.find({ vendornumber: Users._id });
     // console.log(JSON.parse(JSON.stringify(reviews)) + " console")
     return {
       props: {
         Users: JSON.parse(JSON.stringify(Users)),
         reviews: JSON.parse(JSON.stringify(reviews)),
+        vendors: JSON.parse(JSON.stringify(vendors)),
       },
     };
   }
