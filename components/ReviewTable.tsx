@@ -8,7 +8,7 @@ export default function ReviewTable({reviews}) {
       <Table aria-label="Example static collection table mx-auto">
         <TableHeader>
           <TableColumn>VENDOR ID</TableColumn>
-          <TableColumn>REVIEWER'S EMAIL</TableColumn>
+          <TableColumn>REVIEWER&apos;S EMAIL</TableColumn>
           <TableColumn>REVIEW</TableColumn>
         </TableHeader>
         <TableBody>
