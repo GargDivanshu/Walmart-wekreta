@@ -43,7 +43,7 @@ export default function Slug({ Users, reviews, vendors }) {
         })
 
         try {
-            const res = fetch(`http://localhost:3000/api/enterprise/addVendor`, {
+            const res = fetch(`${process.env.DOMAIN}/api/enterprise/addVendor`, {
                 method: 'POST',
         headers: {
           'Content-Type': 'application/json',
