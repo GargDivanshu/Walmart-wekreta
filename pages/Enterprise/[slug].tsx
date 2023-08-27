@@ -171,7 +171,11 @@ export default function Slug({ Users, reviews, vendors }) {
             </div>
            </div>
 
-           <div className="col-span-2">
+           <div className="col-span-2 flex flex-col text-center">
+            Vendors who work for you
+            <span className="text-xs py-2 text-center">
+            Track the performance of all of your Vendors
+              </span>
            <MyTable vendors={vendors} />
            </div>
            
