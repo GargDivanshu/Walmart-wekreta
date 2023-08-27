@@ -58,7 +58,7 @@ export default function Sidebar(props : SidebarProps) {
                 alt="QR"
               /> */}
               {/* make a button */}
-              <QRCode value={`${process.env.DOMAIN}/Customer?id=${props.Users._id}`} />
+              <QRCode value={`https://walmart-wekreta.vercel.app/Customer?id=${props.Users._id}`} />
               {/* <button className="bg-white hover:bg-green-700 mt-3 text-white font-bold py-1 px-6 rounded">
               Share QR  
          
