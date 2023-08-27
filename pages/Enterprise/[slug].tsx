@@ -141,7 +141,7 @@ export default function Slug({ Users, reviews, vendors }) {
 
         <div className="text-black m-8 w-full justify-items-center flex flex-col relative mt-12 min-h-fit">
             <span className="text-center text-4xl mx-auto h-fit w-4/5">
-                Welcome to WeKreta, <span className="text-[#70BC58]">{Users.firstName}</span>
+                Welcome to WEkreta™, <span className="text-[#70BC58]">{Users.firstName}</span>
             </span>
 
 
@@ -157,10 +157,10 @@ export default function Slug({ Users, reviews, vendors }) {
 
           { 
           (state === "Home") ? 
-          <div className="grid grid-cols-2 font-semibold">
-           <img 
+          <div className="grid grid-cols-1 py-4 font-semibold">
+           {/* <img 
            className="w-[300px] aspect-auto mx-auto pb-10"
-           src="/indian_vendor.png"/>
+           src="/indian_vendor.png"/> */}
            <div className="items-center flex flex-col text-xl text-center m-auto">
            <div className="items-center my-4">
             It&apos;s great to see you are with us. Let&apos;s get started with your business. 
@@ -173,7 +173,7 @@ export default function Slug({ Users, reviews, vendors }) {
             </div>
            </div>
 
-           <div className="col-span-2 flex flex-col text-center">
+           <div className="col-span-2 flex flex-col py-4 text-center">
             Vendors who work for you
             <span className="text-xs py-2 text-center">
             Track the performance of all of your Vendors
