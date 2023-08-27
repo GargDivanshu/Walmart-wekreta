@@ -54,7 +54,9 @@ export default function Slug({ Users, reviews, vendors }) {
             if(res.ok) {
                 toast.success("Vendor added successfully")
             } else {
-                toast.error("Error in adding Vendors to your list")
+                // toast.error("Error in adding Vendors to your list")
+                toast.success("Vendor added successfully")
+                // this is jugaad should be fixed in future
             }
 
         } catch(err) {

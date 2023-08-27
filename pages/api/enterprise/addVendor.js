@@ -23,7 +23,7 @@ const handler = async (req, res) => {
       const isVendorAlreadyAdded = enterprise.employee.includes(vendor._id);
 
       if (isVendorAlreadyAdded) {
-        return res.status(400).json({ err: "Vendor already added" });
+        return res.status(200).json({ err: "Vendor already added" });
       }
 
       enterprise.employee.push(vendor._id);
