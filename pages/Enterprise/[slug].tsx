@@ -75,7 +75,7 @@ export default function Slug({ Users, reviews, vendors }) {
                 <span className="absolute top-0 bottom-0 left-0 right-0 m-auto font-bold mt-4 text-black">WeKreta</span>
             </div> */}
 
-            <div className="text-sm mx-auto text-center flex w-3/5">
+            <div className="text-sm mx-auto text-center flex w-3/5 mt-8">
             {/* <MdOutlineDashboard 
             classNam="my-auto mx-4"
             fontSize={20}/> */}
